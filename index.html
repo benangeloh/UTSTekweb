@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <div class="justify-center items-center w-full">
+            <h2 class="text-xl font-bold py-2 text-center">Food Menu</h2>
+        </div>
+    </header>
+
+    <main>
+        <div class="text-[#000] grid gap-6 grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+            <!-- Pizza -->
+            <div id="pizzaItem" class="rounded-b-lg my-4">
+                <img src="pizza.jpg" class="rounded-t-lg w-full" alt="pizza">
+                <div class="mx-4">
+                    <h2 class="text-md font-bold my-2">Pizza</h2>
+                    <p id="pizzaPrice" class="text-sm">$12.99</p>
+                </div>
+                <div class="mx-4 flex my-4">
+                    <button onclick="changeQuantity('pizza', -1)" class="text-[#fff] w-10 p-2 bg-blue-800 font-bold rounded-l-md">-</button>
+                    <p id="pizzaCount" class="w-10 p-2 text-center">1</p>
+                    <button onclick="changeQuantity('pizza', 1)" class="text-[#fff] w-10 p-2 bg-blue-800 font-bold rounded-r-md">+</button>
+                </div>
+                <div class="mx-4 flex my-4">
+                    <h3 id="pizzaTotalPrice" class="text-[#fff] font-bold p-2 bg-blue-800 rounded-md">$12.99</h3>
+                </div>
+            </div>
+
+            <!-- Burger -->
+            <div id="burgerItem" class="rounded-b-lg my-4">
+                <img src="burger.jpg" class="rounded-t-lg w-full" alt="burger">
+                <div class="mx-4">
+                    <h2 class="text-md font-bold my-2">Burger</h2>
+                    <p id="burgerPrice" class="text-sm">$8.99</p>
+                </div>
+                <div class="mx-4 flex my-4">
+                    <button onclick="changeQuantity('burger', -1)" class="text-[#fff] w-10 p-2 bg-blue-800 font-bold rounded-l-md">-</button>
+                    <p id="burgerCount" class="w-10 p-2 text-center">1</p>
+                    <button onclick="changeQuantity('burger', 1)" class="text-[#fff] w-10 p-2 bg-blue-800 font-bold rounded-r-md">+</button>
+                </div>
+                <div class="mx-4 flex my-4">
+                    <h3 id="burgerTotalPrice" class="text-[#fff] font-bold p-2 bg-blue-800 rounded-md">$8.99</h3>
+                </div>
+            </div>
+
+            <!-- Hotdog -->
+            <div id="hotdogItem" class="rounded-b-lg my-4">
+                <img src="hotdog.jpg" class="rounded-t-lg w-full" alt="hotdog">
+                <div class="mx-4">
+                    <h2 class="text-md font-bold my-2">Hotdog</h2>
+                    <p id="hotdogPrice" class="text-sm">$4.99</p>
+                </div>
+                <div class="mx-4 flex my-4">
+                    <button onclick="changeQuantity('hotdog', -1)" class="text-[#fff] w-10 p-2 bg-blue-800 font-bold rounded-l-md">-</button>
+                    <p id="hotdogCount" class="w-10 p-2 text-center">1</p>
+                    <button onclick="changeQuantity('hotdog', 1)" class="text-[#fff] w-10 p-2 bg-blue-800 font-bold rounded-r-md">+</button>
+                </div>
+                <div class="mx-4 flex my-4">
+                    <h3 id="hotdogTotalPrice" class="text-[#fff] font-bold p-2 bg-blue-800 rounded-md">$4.99</h3>
+                </div>
+            </div>
+
+            <!-- Burrito -->
+            <div id="burritoItem" class="rounded-b-lg my-4">
+                <img src="burrito.jpg" class="rounded-t-lg w-full" alt="burrito">
+                <div class="mx-4">
+                    <h2 class="text-md font-bold my-2">Burrito</h2>
+                    <p id="burritoPrice" class="text-sm">$6.99</p>
+                </div>
+                <div class="mx-4 flex my-4">
+                    <button onclick="changeQuantity('burrito', -1)" class="text-[#fff] w-10 p-2 bg-blue-800 font-bold rounded-l-md">-</button>
+                    <p id="burritoCount" class="w-10 p-2 text-center">1</p>
+                    <button onclick="changeQuantity('burrito', 1)" class="text-[#fff] w-10 p-2 bg-blue-800 font-bold rounded-r-md">+</button>
+                </div>
+                <div class="mx-4 flex my-4">
+                    <h3 id="burritoTotalPrice" class="text-[#fff] font-bold p-2 bg-blue-800 rounded-md">$6.99</h3>
+                </div>
+            </div>
+
+            <!-- Pasta -->
+            <div id="pastaItem" class="rounded-b-lg my-4">
+                <img src="pasta.jpg" class="rounded-t-lg w-full" alt="pasta">
+                <div class="mx-4">
+                    <h2 class="text-md font-bold my-2">Pasta</h2>
+                    <p id="pastaPrice" class="text-sm">$14.99</p>
+                </div>
+                <div class="mx-4 flex my-4">
+                    <button onclick="changeQuantity('pasta', -1)" class="text-[#fff] w-10 p-2 bg-blue-800 font-bold rounded-l-md">-</button>
+                    <p id="pastaCount" class="w-10 p-2 text-center">1</p>
+                    <button onclick="changeQuantity('pasta', 1)" class="text-[#fff] w-10 p-2 bg-blue-800 font-bold rounded-r-md">+</button>
+                </div>
+                <div class="mx-4 flex my-4">
+                    <h3 id="pastaTotalPrice" class="text-[#fff] font-bold p-2 bg-blue-800 rounded-md">$14.99</h3>
+                </div>
+            </div>
+            
+
+            <!-- Hotdog -->
+            <div id="sodaItem" class="rounded-b-lg my-4">
+                <img src="soda.jpg" class="rounded-t-lg w-full" alt="soda">
+                <div class="mx-4">
+                    <h2 class="text-md font-bold my-2">Soda</h2>
+                    <p id="sodaPrice" class="text-sm">$2.99</p>
+                </div>
+                <div class="mx-4 flex my-4">
+                    <button onclick="changeQuantity('soda', -1)" class="text-[#fff] w-10 p-2 bg-blue-800 font-bold rounded-l-md">-</button>
+                    <p id="sodaCount" class="w-10 p-2 text-center">1</p>
+                    <button onclick="changeQuantity('soda', 1)" class="text-[#fff] w-10 p-2 bg-blue-800 font-bold rounded-r-md">+</button>
+                </div>
+                <div class="mx-4 flex my-4">
+                    <h3 id="sodaTotalPrice" class="text-[#fff] font-bold p-2 bg-blue-800 rounded-md">$2.99</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="my-6">
+            <h2 class="text-xl font-bold">Grand Total: $<span id="grandTotal">26.97</span></h2>
+        </section>
+
+        <div class="top-3/4 mx-2">
+            <button type="submit" onclick="restart" class=" w-full bg-blue-800 rounded-lg p-2 text-[#fff]">Checkout</button>
+        </div>
+    </main>
+
+    <script>
+        const prices = {
+            pizza: 12.99,
+            burger: 8.99,
+            hotdog: 4.99,
+            burrito: 6.99,
+            pasta: 14.99,
+            soda: 2.99
+        };
+
+        const quantities = {
+            pizza: 1,
+            burger: 1,
+            hotdog: 1,
+            burrito: 1,
+            pasta: 1,
+            soda: 1
+        };
+
+        function changeQuantity(item, delta) {
+            const countElement = document.getElementById(`${item}Count`);
+            const totalPriceElement = document.getElementById(`${item}TotalPrice`);
+
+            let currentCount = quantities[item];
+            currentCount = Math.max(1, currentCount + delta);
+            quantities[item] = currentCount;
+            countElement.textContent = currentCount;
+
+            // Update total price for the item
+            const itemTotal = (prices[item] * currentCount).toFixed(2);
+            totalPriceElement.textContent = `$${itemTotal}`;
+
+
+            updateGrandTotal();
+        }
+
+        function updateGrandTotal() {
+            let grandTotal = 0;
+            for (const item in prices) {
+                grandTotal += prices[item] * quantities[item];
+            }
+            document.getElementById("grandTotal").textContent = grandTotal.toFixed(2);
+        }
+    </script>
+</body>
+</html>
+
